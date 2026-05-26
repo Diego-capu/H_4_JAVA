@@ -11,14 +11,37 @@ let itemesArray = []
 
 main_form.addEventListener("submit", function(e) {
     e.preventDefault();
-    const textclean = item_name.value.trim(); 
-    const textclean2 = item_value.value.trim();
-    if (textclean === "" ||  textclean2 === ""){
+    const name_clean = item_name.value.trim(); 
+    const value_clean = item_value.value.trim();
+    if (name_clean === "" ||  value_clean === ""){
         alert("ingrese un dato")
         return;
     }else{
         alert("Dato guardado")
+        const new_product = {
+            id : Date.now(),
+            name : name_clean,
+            value : value_clean
+        };
+        itemesArray.push(new_product)
     }
-    console.log(textclean)
-    console.log(textclean2)
+    item_name.value = "";
+    item_value.value = "";
+    item_name.focus();
+    console.log(name_clean)
+    console.log(value_clean)
+    console.log(itemesArray)
 });
+
+function render_items (){
+    items_list.innerHTML = "";
+
+    itemesArray.forEach((element, index)=>{
+        const li = document.createElement("li");
+        const span = document.createElement("span");
+        const button = document.createElement("button")
+        span.textContent = element;
+        button.textContent = "eliminar";
+    })
+
+}
