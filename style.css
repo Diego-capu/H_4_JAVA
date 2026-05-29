@@ -1,0 +1,176 @@
+/* ====== CONFIGURACIÓN GENERAL ====== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #1e1e24;
+    color: #f5f5f7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    background-color: #2a2a35;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    max-width: 550px;
+}
+
+/* ====== TIPOGRAFÍA Y DISEÑO ====== */
+h1 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #ffffff;
+    text-align: center;
+}
+
+h2, h3 {
+    font-size: 1.3rem;
+    margin: 20px 0 15px 0;
+    color: #a1a1aa;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background: #444455;
+    margin: 25px 0;
+}
+
+/* ====== FORMULARIOS ====== */
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 0.9rem;
+    color: #cbd5e1;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    background-color: #1e1e24;
+    border: 2px solid #444455;
+    border-radius: 6px;
+    color: #fff;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #6366f1;
+}
+
+/* ====== BOTONES ====== */
+button {
+    font-size: 0.95rem;
+    font-weight: 600;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.btn-primary {
+    background-color: #6366f1;
+    color: white;
+    width: 100%;
+}
+
+.btn-primary:hover {
+    background-color: #4f46e5;
+}
+
+.btn-secondary {
+    background-color: #4b5563;
+    color: white;
+}
+
+.btn-secondary:hover {
+    background-color: #374151;
+}
+
+/* ====== LISTA DE ELEMENTOS DINÁMICOS ====== */
+ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+li {
+    background-color: #3f3f4e;
+    padding: 14px 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 8px;
+    border-left: 4px solid #6366f1;
+    transition: transform 0.2s ease;
+}
+
+li:hover {
+    transform: translateX(4px);
+}
+
+li span {
+    font-size: 1rem;
+    color: #f1f5f9;
+}
+
+/* Contenedor interno de los botones del item */
+li div {
+    display: flex;
+    gap: 8px;
+}
+
+/* Botones específicos de la lista (Eliminar / Editar) */
+li button {
+    padding: 6px 12px;
+    font-size: 0.85rem;
+}
+
+li button:nth-of-type(1) { /* Botón Eliminar */
+    background-color: #ef4444;
+    color: white;
+}
+
+li button:nth-of-type(1):hover {
+    background-color: #dc2626;
+}
+
+li button:nth-of-type(2) { /* Botón Editar */
+    background-color: #eab308;
+    color: #1e1e24;
+}
+
+li button:nth-of-type(2):hover {
+    background-color: #ca8a04;
+}
+
+/* ====== SECCIÓN DE ACCIONES ====== */
+.action-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.action-buttons button {
+    flex: 1;
+}
+
+/* ====== MENSAJES DE ÉXITO O ERROR ====== */
+.error { color: #f87171; margin-bottom: 15px; }
+.success { color: #4ade80; margin-bottom: 15px; }
